@@ -1,166 +1,120 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="px-40 text-gray-600 body-font bg-indigo-700">
-      <div className="px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div className=" flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-          <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <Image src="/logo.svg" height={100} width={150} alt="logo" />
-          </a>
-        </div>
-        <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 text-left">
-          <div className="lg:w-1/4 md:w-1/2 w-full">
-            <h2 className="title-font font-bold text-gray-200 tracking-widest text-md mb-3">
+    <footer className="px-5 md:px-20 py-5 md:py-10 bg-gray-700 flex flex-col space-y-10">
+      <div className="w-full flex flex-col md:flex-row items-start md:space-x-20">
+        <Image src="/logo.svg" height={100} width={120} alt="logo" />
+        <div className="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-3">
+          <div className="inline-flex flex-col space-y-2">
+            <h2 className="title-font font-bold text-gray-200 tracking-widest text-md">
               MUSICBOX
             </h2>
-            <nav className="list-none mb-10">
-              <li>
-                <a className="text-white hover:text-primaryLight" href="#">
-                  About
-                </a>
-              </li>
-              <li>
-                <a className="text-white hover:text-primaryLight" href="#">
-                  Premium
-                </a>
-              </li>
-              <li>
-                <a className="text-white hover:text-primaryLight" href="#">
-                  Features
-                </a>
-              </li>
-            </nav>
+            <a className="text-white hover:text-primary-200" href="#">
+              About
+            </a>
+            <a className="text-white hover:text-primary-200" href="#">
+              Premium
+            </a>
+            <a className="text-white hover:text-primary-200" href="#">
+              Features
+            </a>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full ">
-            <h2 className="title-font font-bold text-gray-200 tracking-widest text-md mb-3">
+          <div className="inline-flex flex-col space-y-2">
+            <h2 className="title-font font-bold text-gray-200 tracking-widest text-md">
               COMMUNITIES
             </h2>
-            <nav className="list-none mb-10">
-              <li>
-                <a className="text-white hover:text-primaryLight" href="#">
-                  For Artists
-                </a>
-              </li>
-              <li>
-                <a className="text-white hover:text-primaryLight" href="#">
-                  Developers
-                </a>
-              </li>
-              <li>
-                <a className="text-white hover:text-primaryLight" href="#">
-                  Press
-                </a>
-              </li>
-            </nav>
+            <a className="text-white hover:text-primary-200" href="#">
+              For Artists
+            </a>
+            <a className="text-white hover:text-primary-200" href="#">
+              Developers
+            </a>
+            <a className="text-white hover:text-primary-200" href="#">
+              Press
+            </a>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full ">
-            <h2 className="title-font font-bold text-gray-200 tracking-widest text-md mb-3">
+          <div className="mt-10 md:mt-0 inline-flex flex-col space-y-2">
+            <h2 className="title-font font-bold text-gray-200 tracking-widest text-md">
               USEFUL LINKS
             </h2>
-            <nav className="list-none mb-10">
-              <li>
-                <a className="text-white hover:text-primaryLight" href="#">
-                  Help
-                </a>
-              </li>
-              <li>
-                <a className="text-white hover:text-primaryLight" href="#">
-                  Web Player
-                </a>
-              </li>
-              <li>
-                <a className="text-white hover:text-primaryLight" href="#">
-                  Explore Chanels
-                </a>
-              </li>
-              <li>
-                <a className="text-white hover:text-primaryLight" href="#">
-                  Download App
-                </a>
-              </li>
-            </nav>
+            <a className="text-white hover:text-primary-200" href="#">
+              Help
+            </a>
+            <a className="text-white hover:text-primary-200" href="#">
+              Web Player
+            </a>
+            <a className="text-white hover:text-primary-200" href="#">
+              Explore Channels
+            </a>
+            <a className="text-white hover:text-primary-200" href="#">
+              Download App
+            </a>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full text-right">
-            <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-              <a className="text-gray-200">
-                <span className="w-10 h-10 items-center justify-center inline-flex rounded-full bg-gray-300">
-                  <svg
-                    fill="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-5 h-5 text-white"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                  </svg>
-                </span>
-              </a>
-              <a className="ml-3 text-gray-200">
-                <span className="w-10 h-10 items-center justify-center inline-flex rounded-full bg-gray-300">
-                  <svg
-                    fill="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-5 h-5 text-white"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                  </svg>
-                </span>
-              </a>
-              <a className="ml-3 text-gray-200">
-                <span className="w-10 h-10 items-center justify-center inline-flex rounded-full bg-gray-300">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-5 h-5 text-white"
-                    viewBox="0 0 24 24"
-                  >
-                    <rect
-                      width="20"
-                      height="20"
-                      x="2"
-                      y="2"
-                      rx="5"
-                      ry="5"
-                    ></rect>
-                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                  </svg>
-                </span>
-              </a>
+        </div>
+
+        <div className="mt-10 md:mt-0 w-full md:w-1/3 flex flex-row md:flex-col justify-between items-end md:space-y-20">
+          <div className="inline-flex space-x-3">
+            <span className="w-10 h-10 items-center justify-center inline-flex rounded-full bg-gray-300">
+              <svg
+                fill="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                className="w-5 h-5 text-white"
+                viewBox="0 0 24 24"
+              >
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
             </span>
-            <p className="text-white text-sm text-right">English (US)</p>
+            <span className="w-10 h-10 items-center justify-center inline-flex rounded-full bg-gray-300">
+              <svg
+                fill="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                className="w-5 h-5 text-white"
+                viewBox="0 0 24 24"
+              >
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </span>
+            <span className="w-10 h-10 items-center justify-center inline-flex rounded-full bg-gray-300">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                className="w-5 h-5 text-white"
+                viewBox="0 0 24 24"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <p className="text-white text-sm">English (US)</p>
+            <img src="/icons/down.svg" alt="down" className="hidden md:block" />
+            <img src="/icons/right.svg" alt="right" className="md:hidden" />
           </div>
         </div>
       </div>
-      <div className="bg-indigo-900">
-        <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <div className="flex">
-            <p className="mr-3 text-gray-200 text-xs">Legal</p>
-            <p className="mx-3 text-gray-200 text-xs">Privacy</p>
-            <p className="mx-3 text-gray-200 text-xs">Cookies</p>
-            <p className="mx-3 text-gray-200 text-xs">Ads</p>
-          </div>
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-start">
-            <p className="text-gray-200 text-sm text-left">
-              &copy; 2019 - {new Date().getFullYear()}
-              <a
-                href="/z"
-                rel="noopener noreferrer"
-                className="ml-1"
-                target="_blank"
-              >
-                MusicBox
-              </a>
-            </p>
-          </span>
+
+      <div className="w-full flex justify-between text-gray-200 text-xs md:text-sm">
+        <div className="flex space-x-3 ">
+          <p>Legal</p>
+          <p>Privacy</p>
+          <p>Cookies</p>
+          <p>Ads</p>
+        </div>
+        <div className="flex space-x-1">
+          <p>&copy; 2019 - {new Date().getFullYear()}</p>
+          <Link href="/">MusicBox</Link>
         </div>
       </div>
     </footer>

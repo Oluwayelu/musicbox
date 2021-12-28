@@ -6,7 +6,7 @@ function Button({ color, children }: InferProps<typeof Button.propTypes>) {
     <button
       className={
         color === "primary"
-          ? "mx-3 my-2 rounded-full px-10 py-2 text-white text-center bg-gradient-to-r from-primaryLight to-secondary"
+          ? "mx-3 my-2 rounded-full px-10 py-2 text-white text-center bg-gradient-to-r from-primary-200 to-secondary"
           : "mx-3 my-2 border-2 border-white rounded-full px-10 py-2 text-white text-center"
       }
     >

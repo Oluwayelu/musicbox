@@ -1,105 +1,108 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from "next";
-import Parallax from "../components/Parallax";
+import Image from "next/image";
+import Link from "next/link";
+import { Parallax } from "../components";
 
 const Signup: NextPage = () => {
   return (
-    <Parallax title="Music Box: Login to Music Box" description="">
-      {/* <div className="p-5 rounded-xl bg-white ">
-        <h1 className="text-2xl text-gray-600 text-center font-bold">
-          Ready to signup?
-        </h1>
-        <div className="my-10 flex flex-col md:flex-row justify-center">
-          <div className="mx-3 px-10 py-2 rounded-full bg-primary">
-            Facebook
-          </div>
-          <div className="mx-3 px-10 py-2 rounded-full border border-gray-600">
-            Google
-          </div>
-        </div>
-        <div className="my-5 relative">
-          <input
-            className="input border border-primary appearance-none rounded-md w-full px-3 py-3 pt-5 pb-2 focus focus:border-primary focus:outline-none active:outline-none active:border-primaryLight"
-            id="email"
-            type="text"
-          />
-          <label
-            htmlFor="email"
-            className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-600 text-xl cursor-text"
-          >
-            Email address
-          </label>
-        </div>
-
-        <div className="my-5 relative">
-          <input
-            className="input border border-primary appearance-none rounded-md w-full px-3 py-3 pt-5 pb-2 focus focus:border-primary focus:outline-none active:outline-none active:border-primaryLight"
-            id="email"
-            type="password"
-          />
-          <label
-            htmlFor="email"
-            className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-600 text-xl cursor-text"
-          >
-            Password
-          </label>
-        </div>
-        <div className="my-5 relative">
-          <input
-            className="input border border-primary appearance-none rounded-md w-full px-3 py-3 pt-5 pb-2 focus focus:border-primary focus:outline-none active:outline-none active:border-primaryLight"
-            id="username"
-            type="text"
-          />
-          <label
-            htmlFor="username"
-            className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-600 text-xl cursor-text"
-          >
-            Username
-          </label>
-        </div>
-        <div className="flex justify-between">
-          <div className="my-5 mr-3 relative">
-            <input
-              className="input border border-primary appearance-none rounded-md w-full px-3 py-3 pt-5 pb-2 focus focus:border-primary focus:outline-none active:outline-none active:border-primaryLight"
-              id="email"
-              type="text"
+    <Parallax
+      title="Music Box: Sign up to Music Box"
+      description="Create an account on MusicBox"
+    >
+      <div className="p-5 rounded-xl bg-white text-center">
+        <div className="flex justify-end">
+          <Link href="/" passHref>
+            <Image
+              src="/icons/cancel.svg"
+              alt="cancel"
+              width={20}
+              height={20}
             />
-            <label
-              htmlFor="email"
-              className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-600 text-xl cursor-text"
-            >
-              Email address or username
-            </label>
+          </Link>
+        </div>
+        <div className="md:px-16">
+          <h1 className="text-xl md:text-2xl text-gray-600 font-bold">
+            Ready to Sign up?
+          </h1>
+          <div className="my-5 flex items-center justify-center space-x-3">
+            <div className="w-36 md:w-44 px-3 py-1 flex items-center justify-between rounded-full bg-facebook">
+              <Image
+                src="/icons/facebook.svg"
+                alt="facebook logo"
+                width={20}
+                height={20}
+              />
+              <p className="text-white">Facebook</p>
+              <div />
+            </div>
+            <div className="w-36 md:w-44 px-3 py-1 flex items-center justify-between rounded-full border">
+              <Image
+                src="/icons/google.svg"
+                alt="google logo"
+                width={20}
+                height={20}
+              />
+              <p>Google</p>
+              <div />
+            </div>
           </div>
-          <div className="my-5 ml-3 relative">
+          <div className="my-3 space-y-5">
             <input
-              className="input border border-primary appearance-none rounded-md w-full px-3 py-3 pt-5 pb-2 focus focus:border-primary focus:outline-none active:outline-none active:border-primaryLight"
+              className="w-full p-3 border border-primary-400 appearance-none rounded-md focus:border-primary-400 focus:outline-none active:outline-none active:border-primary-200 focus:bg-primary-100"
               id="email"
-              type="text"
+              type="email"
+              placeholder="Email address"
             />
-            <label
-              htmlFor="email"
-              className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-600 text-xl cursor-text"
-            >
-              Email address or username
-            </label>
+            <input
+              className="p-3 border border-primary-400 appearance-none rounded-md w-full focus:border-primary-400 focus:outline-none active:outline-none active:border-primary-200 focus:bg-primary-100"
+              id="password"
+              type="password"
+              placeholder="Password"
+            />
+            <input
+              className="p-3 border border-primary-400 appearance-none rounded-md w-full focus:border-primary-400 focus:outline-none active:outline-none active:border-primary-200 focus:bg-primary-100"
+              id="username"
+              type="text"
+              placeholder="Username"
+            />
+            <div className="flex space-x-3">
+              <input
+                className="p-3 border border-primary-400 appearance-none rounded-md w-full focus:border-primary-400 focus:outline-none active:outline-none active:border-primary-200 focus:bg-primary-100"
+                id="dob"
+                type="date"
+                placeholder="Date of Birth"
+              />
+              <select
+                className="p-3 border border-primary-400 appearance-none rounded-md w-full focus:border-primary-400 focus:outline-none active:outline-none active:border-primary-200 focus:bg-primary-100"
+                defaultValue={0}
+                title="Gender"
+                id="gender"
+                placeholder="Gender"
+              >
+                <option value={0}>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div className="font-base">
+              <p>By clicking on "Sign up", you accept the</p>
+              <p className="text-primary-400">Terms and Conditions of Use.</p>
+            </div>
+            <button className="w-full py-2 text-center text-white text-xl font-bold bg-primary-400 rounded-full uppercase">
+              Sign up
+            </button>
+          </div>
+          <div className="font-base">
+            <p>
+              Already have an account?{" "}
+              <Link href="/login">
+                <a className="text-primary-400 font-bold">Log in</a>
+              </Link>
+            </p>
           </div>
         </div>
-
-        <p className="mt-5 text-center text-lg text-gray-600">
-          By clicking on "Sign up", you accept the <br /> Terms and Conditions
-          of Use.
-        </p>
-        <div className="my-3 text-center">
-          <button className="px-40 py-3 text-white text-xl font-bold bg-primary rounded-full">
-            Sign Up
-          </button>
-        </div>
-        <p className="mt-10 text-center text-xl text-gray-600">
-          Already have an account?{" "}
-          <span className="text-primaryLight"> Log in</span>
-        </p>
-      </div> */}
+      </div>
     </Parallax>
   );
 };

@@ -1,14 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from "next";
-import Footer from "../components/Footer";
-import Parallax from "../components/Parallax";
-import Button from "../components/Button";
+import { Parallax, Button, Footer } from "../components";
 import FlowSection from "../page-sections/landingPage/FlowSection";
 import ListenSection from "../page-sections/landingPage/ListenSection";
 import MusicSection from "../page-sections/landingPage/MusicSection";
 import PremiumSection from "../page-sections/landingPage/PremiumSection";
 
-const Home: NextPage = () => {
+const Landing: NextPage = () => {
   return (
     <div>
       <Parallax title="Music Box: Welcome to Music Box" description="">
@@ -33,9 +31,9 @@ const Home: NextPage = () => {
         <MusicSection />
         <PremiumSection />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
 
-export default Home;
+export default Landing;

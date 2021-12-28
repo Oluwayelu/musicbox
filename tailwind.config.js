@@ -1,11 +1,11 @@
 module.exports = {
-  mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
         gray: {
+          700: "#111313",
           600: "#161A1A",
           500: "#303033",
           400: "#3A3A3D",
@@ -17,15 +17,28 @@ module.exports = {
         current: "current",
       },
       backgroundImage: {
-        "landing-1": "url('/background/landing.svg')",
-        listen: "url('/background/listen.svg')",
+        landing: "url('/background/landing.svg')",
+      },
+      spacing: {
+        "50vh": "50vh",
+        "85vh": "85vh",
       },
     },
     colors: {
       white: "#FFFFFF",
-      primary: "#2D9BEF",
+      primary: {
+        100: "#F8FCFF",
+        200: "#2DCEEF",
+        400: "#2D9BEF",
+      },
       secondary: "#9B2DEF",
-      primaryLight: "#2DCEEF",
+      facebook: "#4267B2",
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
     },
   },
   variants: {
