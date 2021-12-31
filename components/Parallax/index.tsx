@@ -14,7 +14,7 @@ export default function Parallax({
     <div
       className={`${
         !auth && "bg-landing"
-      } "bg-cover bg-center h-screen overflow-auto md:overflow-hidden "`}
+      } "bg-cover bg-center min-h-screen overflow-auto md:overflow-hidden "`}
     >
       <Head>
         <title>{title}</title>
@@ -22,7 +22,7 @@ export default function Parallax({
         <link rel="icon" href="/logo.svg" />
       </Head>
       {auth ? <AuthNavbar /> : <Navbar />}
-      <div className="h-85vh flex items-center justify-center">{children}</div>
+      {children}
     </div>
   );
 }

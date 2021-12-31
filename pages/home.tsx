@@ -1,15 +1,28 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from "next";
-import Footer from "../components/Footer";
-import Parallax from "../components/Parallax";
-import Button from "../components/Button";
+import {
+  ArtistSection,
+  FlowSection,
+  RecentlyPlayed,
+} from "page-sections/HomePage";
+import { Parallax, Player } from "components";
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Parallax title="Music Box: Welcome to Music Box" description="" auth>
-        hme
+    <div className="pb-16 relative">
+      <Parallax title="Music Box: Home Page" description="" auth>
+        <div className="self-start">
+          <FlowSection />
+          <RecentlyPlayed />
+        </div>
       </Parallax>
+      <Player />
+      <FlowSection />
+      <FlowSection />
+      <ArtistSection />
+      <FlowSection />
+      <FlowSection />
+      <ArtistSection />
       {/* <Footer /> */}
     </div>
   );

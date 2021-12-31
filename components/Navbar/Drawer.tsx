@@ -3,11 +3,10 @@ import React from "react";
 import classnames from "classnames";
 import Link from "next/link";
 import PropTypes, { InferProps } from "prop-types";
-import NavLink from "./NavLink";
 
 function Drawer({ open, close }: InferProps<typeof Drawer.propTypes>) {
   const drawer = classnames({
-    "transform top-0 left-0 w-80 bg-gray-500 fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30":
+    "transform top-0 left-0 w-80 bg-gray-500 fixed h-full overflow-auto ease-in-out transition-all duration-300 z-50":
       true,
     "translate-x-0": open,
     "-translate-x-full": !open,
