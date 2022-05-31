@@ -10,7 +10,7 @@ const ArtistSection = () => {
         </h1>
         <p className="text-white">...</p>
       </div>
-      <div className="w-full flex items-stretch space-x-5">
+      <div className="w-full p-10 space-x-5 flex flex-shrink-0 items-start overflow-x-auto scroll-p-5 snap-x scroll-smooth cursor-pointer">
         {artists &&
           artists.map((artist, index) => (
             <DiscCard

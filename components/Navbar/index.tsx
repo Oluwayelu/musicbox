@@ -12,7 +12,7 @@ export default function Navbar() {
     setOpen(!open);
   };
   return (
-    <div className="px-5 md:px-40 h-20  flex items-center justify-between bg-transparent">
+    <div className="absolute w-full px-5 md:px-40 h-20  flex items-center justify-between bg-transparent">
       <div className="w-20 ">
         <Link href="/" passHref>
           <img src="/logo.svg" alt="logo" />

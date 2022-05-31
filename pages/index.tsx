@@ -10,7 +10,7 @@ const Landing: NextPage = () => {
   return (
     <div>
       <Parallax title="Music Box: Welcome to Music Box" description="">
-        <div className="">
+        <div className="w-full flex flex-col items-center justify-center">
           <p className="text-center text-white text-4xl">
             Open the world of music.
           </p>

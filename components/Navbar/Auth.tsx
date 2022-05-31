@@ -1,30 +1,50 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import PropTypes, { InferProps } from "prop-types";
 import Image from "next/image";
-import Link from "next/link";
 
 import Drawer from "./Drawer";
 import NavItem from "./Item";
-import { BROWSE, LIBRARY, HOME } from "routes/CONSTANTS";
+import {
+  BROWSE,
+  LIBRARY,
+  HOME,
+  GENRES_AND_MOODS,
+  NEW_RELEASES,
+  PODCASTS,
+  ROCK,
+} from "routes/CONSTANTS";
 
-export default function AuthNavbar() {
+export default function AuthNavbar({
+  left,
+  center,
+  browse,
+}: InferProps<typeof AuthNavbar.propTypes>) {
   const { pathname } = useRouter();
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState({
+    primary: "",
+    secondary: "",
+  });
   const [open, setOpen] = useState(false);
   const close = () => {
     setOpen(!open);
   };
 
   useEffect(() => {
-    if (pathname === HOME) setActive("Home");
-    else if (pathname === BROWSE) setActive("Browse");
-    else if (pathname === LIBRARY) setActive("Library");
+    if (pathname === HOME) setActive({ ...active, primary: "Home" });
+    else if (pathname === BROWSE + GENRES_AND_MOODS)
+      setActive({ ...active, primary: "Browse", secondary: "Genres & Moods" });
+    else if (pathname === BROWSE + GENRES_AND_MOODS + ROCK)
+      setActive({ ...active, primary: "Browse", secondary: "Genres & Moods" });
+    else if (pathname === LIBRARY) setActive({ ...active, primary: "Library" });
+    else if (pathname === BROWSE + PODCASTS)
+      setActive({ ...active, primary: "Browse", secondary: "Podcasts" });
   }, [pathname]);
 
   return (
-    <div className="px-5 md:px-10 h-20  flex items-center justify-between bg-transparent">
-      <div className="flex items-center">
+    <div className="md:absolute w-full px-5 md:px-10 h-20  flex items-center justify-between bg-transparent">
+      <div className="flex items-center space-x-3">
         <div className="w-20 ">
           <img src="/logo.svg" alt="logo" />
         </div>
@@ -33,25 +53,51 @@ export default function AuthNavbar() {
           active={active}
           setActive={setActive}
           route={HOME}
+          primary
         />
         <NavItem
           name="Browse"
           active={active}
           setActive={setActive}
-          route={BROWSE}
+          route={BROWSE + GENRES_AND_MOODS}
+          primary
         />
         <NavItem
           name="Library"
           active={active}
           setActive={setActive}
           route={LIBRARY}
+          primary
         />
-        <Link href="/home">
-          <a className="text-primary-400 mx-3 hidden md:inline-block border-2 border-primary-400 rounded-full px-5 py-1">
-            {active}
+        {active.primary && (
+          <a className="text-primary-400 hidden md:inline-block border-2 border-primary-400 rounded-full px-5 py-1">
+            {active.primary}
           </a>
-        </Link>
+        )}
+        {left}
       </div>
+      {browse && (
+        <div className="flex items-center space-x-5">
+          <NavItem
+            name="Genres & Moods"
+            active={active}
+            setActive={setActive}
+            route={BROWSE + GENRES_AND_MOODS}
+          />
+          <NavItem
+            name="New Releases"
+            active={active}
+            setActive={setActive}
+            route={BROWSE + NEW_RELEASES}
+          />
+          <NavItem
+            name="Podcasts"
+            active={active}
+            setActive={setActive}
+            route={BROWSE + PODCASTS}
+          />
+        </div>
+      )}
       <div>
         <div className="hidden md:flex items-center text-white space-x-5">
           <div className="flex px-3 py-2 bg-gray-200 rounded-full  space-x-2">
@@ -84,3 +130,9 @@ export default function AuthNavbar() {
     </div>
   );
 }
+
+AuthNavbar.propTypes = {
+  left: PropTypes.node,
+  center: PropTypes.node,
+  browse: PropTypes.bool,
+};

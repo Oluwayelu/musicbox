@@ -7,7 +7,7 @@ function DiscCard({
   image,
 }: InferProps<typeof DiscCard.propTypes>) {
   return (
-    <div className="w-40 flex flex-col items-center">
+    <div className="w-40 snap-start flex-none flex flex-col items-center transform transition ease-in-out duration-300 hover:translate-y-1 hover:scale-110">
       <img
         src={image}
         alt={title}

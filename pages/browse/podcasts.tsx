@@ -1,11 +1,11 @@
 import Parallax from "components/Parallax";
 
-const Browse = () => {
+const Podcasts = () => {
   return (
     <Parallax title="Music Box: Home Page" description="" auth browse>
-      <div className="text-white">Browse</div>
+      <div className="text-white">Podcasts</div>
     </Parallax>
   );
 };
 
-export default Browse;
+export default Podcasts;

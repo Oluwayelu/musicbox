@@ -10,7 +10,7 @@ export default function ListenSection() {
         className="absolute w-full h-full filter object-cover object-center"
       />
       <div className="absolute bg-gray-600 opacity-60 inset-0 z-0" />
-      <div className="flex items-center justify-start px-5 md:px-20 inset-0 absolute z-20">
+      <div className="w-full h-full flex items-center justify-start px-5 md:px-20 relative z-20">
         <div className="w-1/2">
           <h1 className="text-white text-xl md:text-4xl font-bold">
             Listen anytime, anywhere

@@ -11,7 +11,7 @@ const FlowCard: FunctionComponent<FlowInterface> = ({
   backgroundImage,
 }) => {
   return (
-    <div className="w-full h-40 md:h-60 flex items-center p-5 relative transform transition ease-in-out delay-150  duration-300 hover:translate-y-1 hover:scale-90">
+    <div className="w-full h-40 md:h-60 flex items-center p-5 relative transform transition ease-in-out duration-500 hover:scale-90">
       <Image
         src={backgroundImage}
         alt="background image"
@@ -35,8 +35,8 @@ const FlowCard: FunctionComponent<FlowInterface> = ({
               className=" filter object-cover object-center"
             />
           </div>
-          <div className="absolute w-16 h-16 flex items-center justify-center rounded-full bg-gray-400 opacity-75 -bottom-7">
-            <Image src={icon} width={30} height={30} alt="icon" />
+          <div className="absolute w-12 h-12 flex items-center justify-center rounded-full bg-gray-400 opacity-75 -bottom-7">
+            <Image src={icon} width={20} height={20} alt="icon" />
           </div>
         </div>
         <div className="w-1/2 flex flex-col justify-between items-center text-center text-sm  text-gray-100">

@@ -11,12 +11,12 @@ const Home: NextPage = () => {
   return (
     <div className="pb-16 relative">
       <Parallax title="Music Box: Home Page" description="" auth>
-        <div className="self-start">
+        <div className="w-full h-full flex flex-col">
           <FlowSection />
           <RecentlyPlayed />
         </div>
       </Parallax>
-      <Player />
+      {/* <Player /> */}
       <FlowSection />
       <FlowSection />
       <ArtistSection />
